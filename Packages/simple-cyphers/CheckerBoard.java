@@ -14,7 +14,7 @@ import cipher.Cipher;
 
 public class CheckerBoard extends Cipher {
 
-    final String[][] alphabit = {{"a", "b", "c", "d", "e"}, {"f", "g", "h", "ij", "k"}, {"l", "m", "n", "o", "p"}, {"q", "r", "s", "t", "u"}, {"v", "w", "x", "y", "z"}};
+    final String[][] alphabet = {{"a", "b", "c", "d", "e"}, {"f", "g", "h", "ij", "k"}, {"l", "m", "n", "o", "p"}, {"q", "r", "s", "t", "u"}, {"v", "w", "x", "y", "z"}};
     
     
     public CheckerBoard() {
@@ -30,9 +30,9 @@ public class CheckerBoard extends Cipher {
         String toLowerCase = getCipherText().toLowerCase();
         String[] ciphert = toLowerCase.split("");
         for (int h = 0; h < getCipherText().length(); h++) {
-            for (int i = 0; i < alphabit.length; i++) {
-                for (int j = 0; j < alphabit.length; j++) {
-                    if (alphabit[i][j].contains(ciphert[h])) {
+            for (int i = 0; i < alphabet.length; i++) {
+                for (int j = 0; j < alphabet.length; j++) {
+                    if (alphabet[i][j].contains(ciphert[h])) {
                         newtxt += "" + (i + 1) + (j + 1);
                     }
                 }
@@ -44,7 +44,7 @@ public class CheckerBoard extends Cipher {
 
     @Override
     public void decrypt() {
-        javax.swing.JOptionPane.showMessageDialog(null, "For meanwhile, If your massege were containing the letter i or j they will show together.");
+        javax.swing.JOptionPane.showMessageDialog(null, "For meanwhile, If your message contains the letter i or j, both will show together.");
         String[] ciphert = getCipherText().split("");
         int[] arr = new int[ciphert.length];
         for (int i = 0; i < arr.length; i++) {
@@ -56,7 +56,7 @@ public class CheckerBoard extends Cipher {
             //System.out.println(first);
             int sec = index(arr, ++i);
            //System.out.println(sec);
-            newtxt += alphabit[--first][--sec];
+            newtxt += alphabet[--first][--sec];
         }
            
         setCipherText();
