@@ -41,7 +41,7 @@ public class A1Z26 extends Cipher{
     
     @Override
     public void decrypt(){
-       char[] alphabits = get1DAlphabitsArray();
+       char[] alphabets = get1DAlphabetsArray();
        String[] ciphertxt = getCipherText().split("-");
        int[] ciphert = new int[ciphertxt.length];
        
@@ -51,9 +51,9 @@ public class A1Z26 extends Cipher{
          
        }
         for(int i = 0; i < ciphert.length; i++){
-            for(int j =0; j < alphabits.length; j++){
+            for(int j =0; j < alphabets.length; j++){
                if(ciphert[i] == j+1)
-                    newtxt += alphabits[j];
+                    newtxt += alphabets[j];
             }
         }
        setCipherText();
