@@ -13,7 +13,7 @@ import cipher.Cipher;
  */
 public class ADFGX extends Cipher {
 
-    final String[][] alphabit = {{"a", "b", "c", "d", "e"}, {"f", "g", "h", "ij", "k"}, {"l", "m", "n", "o", "p"}, {"q", "r", "s", "t", "u"}, {"v", "w", "x", "y", "z"}};
+    final String[][] alphabet = {{"a", "b", "c", "d", "e"}, {"f", "g", "h", "ij", "k"}, {"l", "m", "n", "o", "p"}, {"q", "r", "s", "t", "u"}, {"v", "w", "x", "y", "z"}};
 
     public ADFGX() {
         super("DFAXFAFAFG");
@@ -62,9 +62,9 @@ public class ADFGX extends Cipher {
         String toLowerCase = getCipherText().toLowerCase();
         String[] ciphert = toLowerCase.split("");
         for (int h = 0; h < ciphert.length; h++) {
-            for (int i = 0; i < alphabit.length; i++) {
+            for (int i = 0; i < alphabet.length; i++) {
                 for (int j = 0; j < alphabit.length; j++) {
-                    if (alphabit[i][j].contains(ciphert[h])) {
+                    if (alphabet[i][j].contains(ciphert[h])) {
                         newtxt += "" + returnChar(i) + returnChar(j);
                     }
                 }
@@ -81,7 +81,7 @@ public class ADFGX extends Cipher {
         for (int i = 0; i < getCipherText().length() - 1; i++) {
             first = returnIndex(getCipherText().charAt(i));
             second = returnIndex(getCipherText().charAt(++i));
-            newtxt += alphabit[first][second];
+            newtxt += alphabet[first][second];
         }
 
         setCipherText();
