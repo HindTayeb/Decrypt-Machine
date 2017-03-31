@@ -47,22 +47,22 @@ public abstract class Cipher {
     }
     
     
-    protected char[] get1DAlphabitsArray(){
-        char[] alphabits = new char[26];
+    protected char[] get1DAlphabetsArray(){
+        char[] alphabets = new char[26];
         char letters = 'A';
-        for(int u = 0; u < alphabits.length; u++){
-            alphabits[u] = letters;
+        for(int u = 0; u < alphabets.length; u++){
+            alphabets[u] = letters;
             letters++;
         }
         
-        return alphabits;
+        return alphabets;
     }
     
-   protected String[][] get2DAlphabitsArray(){
-        String[][] alphabit = {{"a", "b", "c", "d", "e"}, {"f", "g", "h", "ij", "k"}, {"l", "m", "n", "o", "p"}, {"q", "r", "s", "t", "u"}, {"v", "w", "x", "y", "z"}};
+   protected String[][] get2DAlphabetsArray(){
+        String[][] alphabet2D = {{"a", "b", "c", "d", "e"}, {"f", "g", "h", "ij", "k"}, {"l", "m", "n", "o", "p"}, {"q", "r", "s", "t", "u"}, {"v", "w", "x", "y", "z"}};
         
         
-        return alphabit;
+        return alphabet2D;
     }
     
 }
