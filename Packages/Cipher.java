@@ -43,7 +43,7 @@ public abstract class Cipher {
     }
     
     protected void reset(){
-        newtxt = "";
+        newtxt = "hi";
     }
     
     
