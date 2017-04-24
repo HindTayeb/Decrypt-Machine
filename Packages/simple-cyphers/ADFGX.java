@@ -13,7 +13,7 @@ import cipher.Cipher;
  */
 public class ADFGX extends Cipher {
 
-    final String[][] alphabet = {{"a", "b", "c", "d", "e"}, {"f", "g", "h", "ij", "k"}, {"l", "m", "n", "o", "p"}, {"q", "r", "s", "t", "u"}, {"v", "w", "x", "y", "z"}};
+    final String[][] alphabet = {{"A", "b", "c", "d", "e"}, {"f", "g", "h", "ij", "k"}, {"l", "m", "n", "o", "p"}, {"q", "r", "s", "t", "u"}, {"v", "w", "x", "y", "z"}};
 
     public ADFGX() {
         super("DFAXFAFAFG");
