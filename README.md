@@ -1,2 +1,2 @@
 # Decrypt-Machine
-unprofessional code for decrypting and encrypting messages. I made it for fun while watching gravity falls :^)
+unprofessional code I made for fun while watching gravity falls, to decrypt messages from the show :^)
